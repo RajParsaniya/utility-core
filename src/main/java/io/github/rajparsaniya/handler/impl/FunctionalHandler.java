@@ -1,0 +1,591 @@
+package io.github.rajparsaniya.handler.impl;
+
+import io.github.rajparsaniya.exception.handler.FunctionalHandlerException;
+import io.github.rajparsaniya.function.IBiConsumer;
+import io.github.rajparsaniya.function.IBiFunction;
+import io.github.rajparsaniya.function.IBiPredicate;
+import io.github.rajparsaniya.function.IBinaryOperator;
+import io.github.rajparsaniya.function.IBooleanSupplier;
+import io.github.rajparsaniya.function.IComparator;
+import io.github.rajparsaniya.function.IConsumer;
+import io.github.rajparsaniya.function.IDoubleBinaryOperator;
+import io.github.rajparsaniya.function.IDoubleConsumer;
+import io.github.rajparsaniya.function.IDoubleFunction;
+import io.github.rajparsaniya.function.IDoublePredicate;
+import io.github.rajparsaniya.function.IDoubleSupplier;
+import io.github.rajparsaniya.function.IDoubleToIntFunction;
+import io.github.rajparsaniya.function.IDoubleToLongFunction;
+import io.github.rajparsaniya.function.IDoubleUnaryOperator;
+import io.github.rajparsaniya.function.IFunction;
+import io.github.rajparsaniya.function.IIntBinaryOperator;
+import io.github.rajparsaniya.function.IIntConsumer;
+import io.github.rajparsaniya.function.IIntFunction;
+import io.github.rajparsaniya.function.IIntPredicate;
+import io.github.rajparsaniya.function.IIntSupplier;
+import io.github.rajparsaniya.function.IIntToDoubleFunction;
+import io.github.rajparsaniya.function.IIntToLongFunction;
+import io.github.rajparsaniya.function.IIntUnaryOperator;
+import io.github.rajparsaniya.function.ILongBinaryOperator;
+import io.github.rajparsaniya.function.ILongConsumer;
+import io.github.rajparsaniya.function.ILongFunction;
+import io.github.rajparsaniya.function.ILongPredicate;
+import io.github.rajparsaniya.function.ILongSupplier;
+import io.github.rajparsaniya.function.ILongToDoubleFunction;
+import io.github.rajparsaniya.function.ILongToIntFunction;
+import io.github.rajparsaniya.function.ILongUnaryOperator;
+import io.github.rajparsaniya.function.IObjDoubleConsumer;
+import io.github.rajparsaniya.function.IObjIntConsumer;
+import io.github.rajparsaniya.function.IObjLongConsumer;
+import io.github.rajparsaniya.function.IPredicate;
+import io.github.rajparsaniya.function.ISupplier;
+import io.github.rajparsaniya.function.IToDoubleBiFunction;
+import io.github.rajparsaniya.function.IToDoubleFunction;
+import io.github.rajparsaniya.function.IToIntBiFunction;
+import io.github.rajparsaniya.function.IToIntFunction;
+import io.github.rajparsaniya.function.IToLongBiFunction;
+import io.github.rajparsaniya.function.IToLongFunction;
+import io.github.rajparsaniya.function.IUnaryOperator;
+import io.github.rajparsaniya.handler.IFunctionalHandler;
+
+import java.util.Comparator;
+import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
+import java.util.function.BiPredicate;
+import java.util.function.BinaryOperator;
+import java.util.function.BooleanSupplier;
+import java.util.function.Consumer;
+import java.util.function.DoubleBinaryOperator;
+import java.util.function.DoubleConsumer;
+import java.util.function.DoubleFunction;
+import java.util.function.DoublePredicate;
+import java.util.function.DoubleSupplier;
+import java.util.function.DoubleToIntFunction;
+import java.util.function.DoubleToLongFunction;
+import java.util.function.DoubleUnaryOperator;
+import java.util.function.Function;
+import java.util.function.IntBinaryOperator;
+import java.util.function.IntConsumer;
+import java.util.function.IntFunction;
+import java.util.function.IntPredicate;
+import java.util.function.IntSupplier;
+import java.util.function.IntToDoubleFunction;
+import java.util.function.IntToLongFunction;
+import java.util.function.IntUnaryOperator;
+import java.util.function.LongBinaryOperator;
+import java.util.function.LongConsumer;
+import java.util.function.LongFunction;
+import java.util.function.LongPredicate;
+import java.util.function.LongSupplier;
+import java.util.function.LongToDoubleFunction;
+import java.util.function.LongToIntFunction;
+import java.util.function.LongUnaryOperator;
+import java.util.function.ObjDoubleConsumer;
+import java.util.function.ObjIntConsumer;
+import java.util.function.ObjLongConsumer;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+import java.util.function.ToDoubleBiFunction;
+import java.util.function.ToDoubleFunction;
+import java.util.function.ToIntBiFunction;
+import java.util.function.ToIntFunction;
+import java.util.function.ToLongBiFunction;
+import java.util.function.ToLongFunction;
+import java.util.function.UnaryOperator;
+
+public class FunctionalHandler extends BaseHandler implements IFunctionalHandler {
+    public FunctionalHandler() {
+        super.throwable(e -> new FunctionalHandlerException(e));
+    }
+
+    public FunctionalHandler(final Supplier<? extends RuntimeException> exception) {
+        super(exception);
+    }
+
+    public FunctionalHandler(final Function<Exception, ? extends RuntimeException> exception) {
+        super(exception);
+    }
+
+    @Override
+    public BooleanSupplier booleanSupplier(final IBooleanSupplier booleanSupplier) {
+        return () -> {
+            try {
+                return booleanSupplier.getAsBoolean();
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public IntSupplier intSupplier(final IIntSupplier intSupplier) {
+        return () -> {
+            try {
+                return intSupplier.getAsInt();
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public IntConsumer intConsumer(final IIntConsumer intConsumer) {
+        return value -> {
+            try {
+                intConsumer.accept(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public IntPredicate intPredicate(final IIntPredicate intPredicate) {
+        return value -> {
+            try {
+                return intPredicate.test(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public IntToLongFunction intToLongFunction(final IIntToLongFunction intToLongFunction) {
+        return value -> {
+            try {
+                return intToLongFunction.applyAsLong(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public IntToDoubleFunction intToDoubleFunction(final IIntToDoubleFunction intToDoubleFunction) {
+        return value -> {
+            try {
+                return intToDoubleFunction.applyAsDouble(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public IntBinaryOperator intBinaryOperator(final IIntBinaryOperator intBinaryOperator) {
+        return (left, right) -> {
+            try {
+                return intBinaryOperator.applyAsInt(left, right);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public IntUnaryOperator intUnaryOperator(final IIntUnaryOperator intUnaryOperator) {
+        return operand -> {
+            try {
+                return intUnaryOperator.applyAsInt(operand);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public LongSupplier longSupplier(final ILongSupplier longSupplier) {
+        return () -> {
+            try {
+                return longSupplier.getAsLong();
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public LongConsumer longConsumer(final ILongConsumer longConsumer) {
+        return value -> {
+            try {
+                longConsumer.accept(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public LongPredicate longPredicate(final ILongPredicate longPredicate) {
+        return value -> {
+            try {
+                return longPredicate.test(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public LongToIntFunction longToIntFunction(final ILongToIntFunction longToIntFunction) {
+        return value -> {
+            try {
+                return longToIntFunction.applyAsInt(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public LongToDoubleFunction longToDoubleFunction(final ILongToDoubleFunction longToDoubleFunction) {
+        return value -> {
+            try {
+                return longToDoubleFunction.applyAsDouble(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public LongBinaryOperator longBinaryOperator(final ILongBinaryOperator longBinaryOperator) {
+        return (left, right) -> {
+            try {
+                return longBinaryOperator.applyAsLong(left, right);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public LongUnaryOperator longUnaryOperator(final ILongUnaryOperator longUnaryOperator) {
+        return operand -> {
+            try {
+                return longUnaryOperator.applyAsLong(operand);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public DoubleSupplier doubleSupplier(final IDoubleSupplier doubleSupplier) {
+        return () -> {
+            try {
+                return doubleSupplier.getAsDouble();
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public DoubleConsumer doubleConsumer(final IDoubleConsumer doubleConsumer) {
+        return value -> {
+            try {
+                doubleConsumer.accept(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public DoublePredicate doublePredicate(final IDoublePredicate doublePredicate) {
+        return value -> {
+            try {
+                return doublePredicate.test(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public DoubleToIntFunction doubleToIntFunction(final IDoubleToIntFunction doubleToIntFunction) {
+        return value -> {
+            try {
+                return doubleToIntFunction.applyAsInt(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public DoubleToLongFunction doubleToLongFunction(final IDoubleToLongFunction doubleToLongFunction) {
+        return value -> {
+            try {
+                return doubleToLongFunction.applyAsLong(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public DoubleBinaryOperator doubleBinaryOperator(final IDoubleBinaryOperator doubleBinaryOperator) {
+        return (left, right) -> {
+            try {
+                return doubleBinaryOperator.applyAsDouble(left, right);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public DoubleUnaryOperator doubleUnaryOperator(final IDoubleUnaryOperator doubleUnaryOperator) {
+        return operand -> {
+            try {
+                return doubleUnaryOperator.applyAsDouble(operand);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T> Supplier<T> supplier(final ISupplier<T> supplier) {
+        return () -> {
+            try {
+                return supplier.get();
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T> Consumer<T> consumer(final IConsumer<T> consumer) {
+        return t -> {
+            try {
+                consumer.accept(t);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T> Predicate<T> predicate(final IPredicate<T> predicate) {
+        return t -> {
+            try {
+                return predicate.test(t);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T, R> Function<T, R> function(final IFunction<T, R> function) {
+        return t -> {
+            try {
+                return function.apply(t);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T, U> BiConsumer<T, U> biConsumer(final IBiConsumer<T, U> biConsumer) {
+        return (t, u) -> {
+            try {
+                biConsumer.accept(t, u);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T, U> BiPredicate<T, U> biPredicate(final IBiPredicate<T, U> biPredicate) {
+        return (t, u) -> {
+            try {
+                return biPredicate.test(t, u);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T, U, R> BiFunction<T, U, R> biFunction(final IBiFunction<T, U, R> biFunction) {
+        return (t, u) -> {
+            try {
+                return biFunction.apply(t, u);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T> BinaryOperator<T> binaryOperator(final IBinaryOperator<T> binaryOperator) {
+        return (t, u) -> {
+            try {
+                return binaryOperator.apply(t, u);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T> ToIntFunction<T> toIntFunction(final IToIntFunction<T> toIntFunction) {
+        return value -> {
+            try {
+                return toIntFunction.applyAsInt(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T> ToLongFunction<T> toLongFunction(final IToLongFunction<T> toLongFunction) {
+        return value -> {
+            try {
+                return toLongFunction.applyAsLong(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T> ToDoubleFunction<T> toDoubleFunction(final IToDoubleFunction<T> toDoubleFunction) {
+        return value -> {
+            try {
+                return toDoubleFunction.applyAsDouble(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T, U> ToIntBiFunction<T, U> toIntBiFunction(final IToIntBiFunction<T, U> toIntBiFunction) {
+        return (t, u) -> {
+            try {
+                return toIntBiFunction.applyAsInt(t, u);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T, U> ToLongBiFunction<T, U> toLongBiFunction(final IToLongBiFunction<T, U> toLongBiFunction) {
+        return (t, u) -> {
+            try {
+                return toLongBiFunction.applyAsLong(t, u);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T, U> ToDoubleBiFunction<T, U> toDoubleBiFunction(final IToDoubleBiFunction<T, U> toDoubleBiFunction) {
+        return (t, u) -> {
+            try {
+                return toDoubleBiFunction.applyAsDouble(t, u);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <R> IntFunction<R> intFunction(final IIntFunction<R> intFunction) {
+        return value -> {
+            try {
+                return intFunction.apply(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <R> LongFunction<R> longFunction(final ILongFunction<R> longFunction) {
+        return value -> {
+            try {
+                return longFunction.apply(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <R> DoubleFunction<R> doubleFunction(final IDoubleFunction<R> doubleFunction) {
+        return value -> {
+            try {
+                return doubleFunction.apply(value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T> ObjIntConsumer<T> objIntConsumer(final IObjIntConsumer<T> objIntConsumer) {
+        return (t, value) -> {
+            try {
+                objIntConsumer.accept(t, value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T> ObjLongConsumer<T> objLongConsumer(final IObjLongConsumer<T> objLongConsumer) {
+        return (t, value) -> {
+            try {
+                objLongConsumer.accept(t, value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T> ObjDoubleConsumer<T> objDoubleConsumer(final IObjDoubleConsumer<T> objDoubleConsumer) {
+        return (t, value) -> {
+            try {
+                objDoubleConsumer.accept(t, value);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T> UnaryOperator<T> unaryOperator(final IUnaryOperator<T> unaryOperator) {
+        return t -> {
+            try {
+                return unaryOperator.apply(t);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+
+    @Override
+    public <T> Comparator<T> comparator(final IComparator<T> comparator) {
+        return (o1, o2) -> {
+            try {
+                return comparator.compare(o1, o2);
+            } catch (Exception e) {
+                throw super.exception(e).get();
+            }
+        };
+    }
+}
