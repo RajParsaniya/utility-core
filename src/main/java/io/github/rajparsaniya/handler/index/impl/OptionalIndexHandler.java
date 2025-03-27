@@ -23,43 +23,43 @@ public class OptionalIndexHandler extends BaseIndexHandler implements IOptionalI
 
     @Override
     public <T> Consumer<T> ifPresent(final IConsumer<T> action) {
-        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex);
+        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex());
         return t -> action.accept(t, atomicInteger.getAndIncrement());
     }
 
     @Override
     public <T> Predicate<T> filter(final IPredicate<T> predicate) {
-        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex);
+        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex());
         return t -> predicate.test(t, atomicInteger.getAndIncrement());
     }
 
     @Override
     public <T, U> Function<T, U> map(final IFunction<T, U> mapper) {
-        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex);
+        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex());
         return t -> mapper.apply(t, atomicInteger.getAndIncrement());
     }
 
     @Override
     public <T, U> Function<T, Optional<U>> flatMap(final IFunction<T, Optional<U>> mapper) {
-        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex);
+        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex());
         return t -> mapper.apply(t, atomicInteger.getAndIncrement());
     }
 
     @Override
     public <T> Supplier<Optional<T>> or(final ISupplier<Optional<T>> supplier) {
-        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex);
+        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex());
         return () -> supplier.get(atomicInteger.getAndIncrement());
     }
 
     @Override
     public <T> Supplier<T> orElseGet(final ISupplier<T> supplier) {
-        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex);
+        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex());
         return () -> supplier.get(atomicInteger.getAndIncrement());
     }
 
     @Override
     public <X extends Throwable> Supplier<X> orElseThrow(final ISupplier<X> exceptionSupplier) {
-        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex);
+        final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex());
         return () -> exceptionSupplier.get(atomicInteger.getAndIncrement());
     }
 }

@@ -3,7 +3,7 @@ package io.github.rajparsaniya.handler.index.impl;
 import io.github.rajparsaniya.handler.index.IBaseIndexHandler;
 
 public class BaseIndexHandler implements IBaseIndexHandler {
-    protected int initialIndex = 0;
+    private int initialIndex = 0;
 
     protected BaseIndexHandler() {
     }
@@ -15,5 +15,9 @@ public class BaseIndexHandler implements IBaseIndexHandler {
     @Override
     public void setInitialIndex(int initialIndex) {
         this.initialIndex = initialIndex;
+    }
+
+    protected int initialIndex() {
+        return initialIndex;
     }
 }
