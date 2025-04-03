@@ -28,6 +28,20 @@ import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 /**
+ * The {@code IStreamHandler} interface provides enhanced functional capabilities
+ * for working with a {@link Stream}. It serves as an abstraction over common Stream operations,
+ * allowing for seamless integration of custom functional interfaces while preserving
+ * the standard Stream API behavior.
+ *
+ * <p>This interface provides functional methods that can be directly used in
+ * {@link Stream#filter(Predicate)}, {@link Stream#map(Function)},
+ * {@link Stream#sorted(Comparator)}, and other standard Stream operations.
+ * It aims to simplify functional programming in Java while maintaining type safety.
+ *
+ * <p>Additionally, it integrates with {@link IStreamExceptionHandler} to handle
+ * exceptions in stream operations and {@link IStreamIndexHandler} for index-based
+ * stream handling.
+ *
  * @author Raj Parsaniya
  * @see IStreamExceptionHandler
  * @see IStreamIndexHandler

@@ -14,6 +14,15 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 /**
+ * The {@code IOptionalHandler} interface provides enhanced functional
+ * capabilities for working with {@link Optional}. It acts as a wrapper around
+ * standard functional constructs, allowing seamless integration with
+ * {@link Optional} while improving readability and maintainability.
+ *
+ * <p>It provides various type of functional methods that can be directly used in
+ * {@link Optional#ifPresent(Consumer)}, {@link Optional#filter(Predicate)},
+ * {@link Optional#map(Function)}, and other standard {@link Optional} operations.
+ *
  * @author Raj Parsaniya
  * @see IOptionalExceptionHandler
  * @see IOptionalIndexHandler

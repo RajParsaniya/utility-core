@@ -13,6 +13,16 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 /**
+ * The {@code IOptionalExceptionHandler} interface provides enhanced exception
+ * handling capabilities for working with {@link Optional}. It serves as a wrapper
+ * around functional constructs, ensuring that exceptions are properly managed
+ * while integrating seamlessly with {@link Optional} operations.
+ *
+ * <p>It provides various type of functional methods that can be directly used in
+ * {@link Optional#ifPresent(Consumer)}, {@link Optional#filter(Predicate)},
+ * {@link Optional#map(Function)}, and other standard {@link Optional} operations,
+ * with built-in exception handling mechanisms.
+ *
  * @author Raj Parsaniya
  * @see IOptionalHandler
  * @since 1.0.0

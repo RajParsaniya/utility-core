@@ -92,6 +92,18 @@ import java.util.function.ToLongFunction;
 import java.util.function.UnaryOperator;
 
 /**
+ * The {@code IFunctionalExceptionHandler} interface provides enhanced exception
+ * handling capabilities for functional interfaces.
+ *
+ * <p>This interface serves as a wrapper around Java's built-in functional interfaces,
+ * offering versions that support exception handling. It allows developers to seamlessly
+ * work with functional constructs while ensuring that exceptions are properly managed.
+ *
+ * <p>This interface acts as a bridge between standard Java functional interfaces
+ * (such as {@link Supplier}, {@link Consumer}, {@link Function}, etc.) and
+ * their corresponding custom functional interfaces (such as {@link ISupplier},
+ * {@link IConsumer}, {@link IFunction}, etc.).
+ *
  * @author Raj Parsaniya
  * @see IFunctionalHandler
  * @since 1.0.0

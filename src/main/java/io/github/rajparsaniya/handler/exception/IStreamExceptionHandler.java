@@ -27,6 +27,19 @@ import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 /**
+ * The {@code IStreamExceptionHandler} interface offers a way to manage exceptions
+ * that might occur during operations within a {@link Stream}.
+ *
+ * <p>This interface provides functional equivalents for common stream operations,
+ * allowing for safe exception handling without disrupting the stream processing flow.
+ * It includes enhanced versions of {@link Stream#filter(Predicate)}, {@link Stream#map(Function)},
+ * {@link Stream#sorted(Comparator)}, and other standard {@link Stream} operations that support
+ * exception handling.
+ *
+ * <p>By wrapping functional interfaces with exception-handling capabilities,
+ * this interface ensures that checked exceptions can be properly managed without
+ * forcing the use of try-catch blocks inside stream operations.
+ *
  * @author Raj Parsaniya
  * @see IStreamHandler
  * @since 1.0.0

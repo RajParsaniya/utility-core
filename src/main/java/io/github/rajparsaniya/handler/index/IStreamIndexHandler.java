@@ -27,6 +27,16 @@ import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 /**
+ * The {@code IStreamIndexHandler} interface offers improved functionalities
+ * for managing index when working with a {@link Stream}. It serves as a wrapper around
+ * functional constructs, allowing seamless integration of index-based operations
+ * with standard {@link Stream} methods.
+ *
+ * <p>It provides various types of functional methods that can be directly used in
+ * {@link Stream#filter(Predicate)}, {@link Stream#map(Function)}, {@link Stream#flatMap(Function)},
+ * {@link Stream#sorted(Comparator)}, and other standard {@link Stream} operations,
+ * ensuring efficient handling of indexed data.
+ *
  * @author Raj Parsaniya
  * @see IStreamHandler
  * @since 1.0.0

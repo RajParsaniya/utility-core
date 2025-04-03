@@ -92,6 +92,18 @@ import java.util.function.ToLongFunction;
 import java.util.function.UnaryOperator;
 
 /**
+ * The {@code IFunctionalIndexHandler} interface provides enhanced index
+ * managing capabilities for functional interfaces.
+ *
+ * <p>This interface serves as a wrapper around Java's built-in functional interfaces,
+ * offering versions that support indexed operations. It allows developers to seamlessly
+ * work with functional constructs while ensuring efficient indexing and retrieval of elements.
+ *
+ * <p>This interface acts as a bridge between standard Java functional interfaces
+ * (such as {@link Supplier}, {@link Consumer}, {@link Function}, etc.) and
+ * their corresponding custom functional interfaces (such as {@link ISupplier},
+ * {@link IConsumer}, {@link IFunction}, etc.).
+ *
  * @author Raj Parsaniya
  * @see IFunctionalHandler
  * @since 1.0.0

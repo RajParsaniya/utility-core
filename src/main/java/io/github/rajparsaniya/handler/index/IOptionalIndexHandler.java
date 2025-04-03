@@ -13,6 +13,16 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 /**
+ * The {@code IOptionalIndexHandler} interface provides enhanced index managing
+ * capabilities for working with {@link Optional}. It serves as a wrapper around
+ * functional constructs, allowing seamless integration of index-based operations
+ * with standard {@link Optional} methods.
+ *
+ * <p>It provides various type of functional methods that can be directly used in
+ * {@link Optional#ifPresent(Consumer)}, {@link Optional#filter(Predicate)},
+ * {@link Optional#map(Function)}, and other standard {@link Optional} operations,
+ * ensuring efficient handling of indexed data.
+ *
  * @author Raj Parsaniya
  * @see IOptionalHandler
  * @since 1.0.0

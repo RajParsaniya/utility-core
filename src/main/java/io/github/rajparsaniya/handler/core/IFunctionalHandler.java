@@ -93,6 +93,15 @@ import java.util.function.ToLongFunction;
 import java.util.function.UnaryOperator;
 
 /**
+ * The {@code IFunctionalHandler} interface provides a functional approach
+ * to handle various Java functional interfaces by wrapping them with custom
+ * functional implementations.
+ *
+ * <p>This interface acts as a bridge between standard Java functional interfaces
+ * (such as {@link Supplier}, {@link Consumer}, {@link Function}, etc.) and
+ * their corresponding custom functional interfaces (such as {@link ISupplier},
+ * {@link IConsumer}, {@link IFunction}, etc.).
+ *
  * @author Raj Parsaniya
  * @see IFunctionalExceptionHandler
  * @see IFunctionalIndexHandler
