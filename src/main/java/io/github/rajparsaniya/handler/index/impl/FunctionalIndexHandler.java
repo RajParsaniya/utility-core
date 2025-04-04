@@ -92,10 +92,28 @@ import java.util.function.ToLongBiFunction;
 import java.util.function.ToLongFunction;
 import java.util.function.UnaryOperator;
 
+/**
+ * The {@code FunctionalIndexHandler} class provides an implementation of the
+ * {@link IFunctionalIndexHandler} interface.
+ *
+ * @author Raj Parsaniya
+ * @since 1.0.0
+ */
 public class FunctionalIndexHandler extends BaseIndexHandler implements IFunctionalIndexHandler {
+
+    /**
+     * Constructs a {@code FunctionalIndexHandler} with a default behaviour.
+     *
+     * @since 1.0.0
+     */
     public FunctionalIndexHandler() {
     }
 
+    /**
+     * Constructs a {@code FunctionalIndexHandler} with a specified initial index.
+     *
+     * @param initialIndex the initial index value to be set.
+     */
     public FunctionalIndexHandler(final Integer initialIndex) {
         super(initialIndex);
     }

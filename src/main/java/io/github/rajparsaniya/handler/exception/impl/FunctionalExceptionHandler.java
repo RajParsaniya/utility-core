@@ -92,15 +92,42 @@ import java.util.function.ToLongBiFunction;
 import java.util.function.ToLongFunction;
 import java.util.function.UnaryOperator;
 
+/**
+ * The {@code FunctionalExceptionHandler} class provides an implementation of the
+ * {@link IFunctionalExceptionHandler} interface.
+ *
+ * @author Raj Parsaniya
+ * @since 1.0.0
+ */
 public class FunctionalExceptionHandler extends BaseExceptionHandler implements IFunctionalExceptionHandler {
+
+    /**
+     * Constructs a {@code FunctionalExceptionHandler} with a default behaviour.
+     *
+     * @since 1.0.0
+     */
     public FunctionalExceptionHandler() {
         super.setThrowable(e -> new FunctionalHandlerException(e));
     }
 
+    /**
+     * Constructs a {@code FunctionalExceptionHandler} with a specified exception supplier.
+     *
+     * @param exception a {@link Supplier} providing a {@link RuntimeException} instance
+     *                  when needed.
+     * @since 1.0.0
+     */
     public FunctionalExceptionHandler(final Supplier<? extends RuntimeException> exception) {
         super(exception);
     }
 
+    /**
+     * Constructs a {@code FunctionalExceptionHandler} with a specified exception function.
+     *
+     * @param exception a {@link Function} that takes an {@link Exception} and returns a
+     *                  {@link RuntimeException} instance when needed.
+     * @since 1.0.0
+     */
     public FunctionalExceptionHandler(final Function<Exception, ? extends RuntimeException> exception) {
         super(exception);
     }

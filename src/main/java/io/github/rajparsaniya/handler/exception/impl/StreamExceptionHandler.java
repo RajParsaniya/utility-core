@@ -28,15 +28,42 @@ import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
+/**
+ * The {@code StreamExceptionHandler} class provides an implementation of the
+ * {@link IStreamExceptionHandler} interface.
+ *
+ * @author Raj Parsaniya
+ * @since 1.0.0
+ */
 public class StreamExceptionHandler extends BaseExceptionHandler implements IStreamExceptionHandler {
+
+    /**
+     * Constructs a {@code StreamExceptionHandler} with a default behaviour.
+     *
+     * @since 1.0.0
+     */
     public StreamExceptionHandler() {
         super.setThrowable((e) -> new StreamHandlerException(e));
     }
 
+    /**
+     * Constructs a {@code StreamExceptionHandler} with a specified exception supplier.
+     *
+     * @param exception a {@link Supplier} providing a {@link RuntimeException} instance
+     *                  when needed.
+     * @since 1.0.0
+     */
     public StreamExceptionHandler(final Supplier<? extends RuntimeException> exception) {
         super(exception);
     }
 
+    /**
+     * Constructs a {@code StreamExceptionHandler} with a specified exception function.
+     *
+     * @param exception a {@link Function} that takes an {@link Exception} and returns a
+     *                  {@link RuntimeException} instance when needed.
+     * @since 1.0.0
+     */
     public StreamExceptionHandler(final Function<Exception, ? extends RuntimeException> exception) {
         super(exception);
     }

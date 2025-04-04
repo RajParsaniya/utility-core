@@ -92,7 +92,23 @@ import java.util.function.ToLongBiFunction;
 import java.util.function.ToLongFunction;
 import java.util.function.UnaryOperator;
 
+/**
+ * The {@code FunctionalHandler} class provides an implementation of the
+ * {@link IFunctionalHandler} interface.
+ *
+ * @author Raj Parsaniya
+ * @since 1.0.0
+ */
 public class FunctionalHandler extends BaseHandler implements IFunctionalHandler {
+
+    /**
+     * Constructs a {@code FunctionalHandler} with a default behaviour.
+     *
+     * @since 1.0.0
+     */
+    public FunctionalHandler() {
+    }
+
     @Override
     public BooleanSupplier booleanSupplier(final IBooleanSupplier booleanSupplier) {
         final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex());

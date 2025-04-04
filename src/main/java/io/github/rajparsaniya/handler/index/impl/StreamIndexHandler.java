@@ -27,10 +27,29 @@ import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
+/**
+ * The {@code StreamIndexHandler} class provides an implementation of the
+ * {@link IStreamIndexHandler} interface.
+ *
+ * @author Raj Parsaniya
+ * @since 1.0.0
+ */
 public class StreamIndexHandler extends BaseIndexHandler implements IStreamIndexHandler {
+
+    /**
+     * Constructs a {@code StreamIndexHandler} with a default behaviour.
+     *
+     * @since 1.0.0
+     */
     public StreamIndexHandler() {
     }
 
+    /**
+     * Constructs a {@code StreamIndexHandler} with a specified initial index.
+     *
+     * @param initialIndex the initial index value to be set.
+     * @since 1.0.0
+     */
     public StreamIndexHandler(final Integer initialIndex) {
         super(initialIndex);
     }

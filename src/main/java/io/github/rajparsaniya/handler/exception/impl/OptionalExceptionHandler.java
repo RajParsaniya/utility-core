@@ -13,15 +13,42 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
+/**
+ * The {@code OptionalExceptionHandler} class provides an implementation of the
+ * {@link IOptionalExceptionHandler} interface.
+ *
+ * @author Raj Parsaniya
+ * @since 1.0.0
+ */
 public class OptionalExceptionHandler extends BaseExceptionHandler implements IOptionalExceptionHandler {
+
+    /**
+     * Constructs a {@code OptionalExceptionHandler} with a default behaviour.
+     *
+     * @since 1.0.0
+     */
     public OptionalExceptionHandler() {
         super.setThrowable((e) -> new OptionalHandlerException(e));
     }
 
+    /**
+     * Constructs a {@code OptionalExceptionHandler} with a specified exception supplier.
+     *
+     * @param exception a {@link Supplier} providing a {@link RuntimeException} instance
+     *                  when needed.
+     * @since 1.0.0
+     */
     public OptionalExceptionHandler(final Supplier<? extends RuntimeException> exception) {
         super(exception);
     }
 
+    /**
+     * Constructs a {@code OptionalExceptionHandler} with a specified exception function.
+     *
+     * @param exception a {@link Function} that takes an {@link Exception} and returns a
+     *                  {@link RuntimeException} instance when needed.
+     * @since 1.0.0
+     */
     public OptionalExceptionHandler(final Function<Exception, ? extends RuntimeException> exception) {
         super(exception);
     }

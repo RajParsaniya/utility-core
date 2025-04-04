@@ -27,7 +27,23 @@ import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
+/**
+ * The {@code StreamHandler} class provides an implementation of the
+ * {@link IStreamHandler} interface.
+ *
+ * @author Raj Parsaniya
+ * @since 1.0.0
+ */
 public class StreamHandler extends BaseHandler implements IStreamHandler {
+
+    /**
+     * Constructs a {@code StreamHandler} with a default behaviour.
+     *
+     * @since 1.0.0
+     */
+    public StreamHandler() {
+    }
+
     @Override
     public <T> Predicate<T> filter(final IPredicate<T> predicate) {
         final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex());

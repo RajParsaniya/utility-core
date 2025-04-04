@@ -13,7 +13,23 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
+/**
+ * The {@code OptionalHandler} class provides an implementation of the
+ * {@link IOptionalHandler} interface.
+ *
+ * @author Raj Parsaniya
+ * @since 1.0.0
+ */
 public class OptionalHandler extends BaseHandler implements IOptionalHandler {
+
+    /**
+     * Constructs a {@code OptionalHandler} with a default behaviour.
+     *
+     * @since 1.0.0
+     */
+    public OptionalHandler() {
+    }
+
     @Override
     public <T> Consumer<T> ifPresent(final IConsumer<T> action) {
         final AtomicInteger atomicInteger = new AtomicInteger(super.initialIndex());

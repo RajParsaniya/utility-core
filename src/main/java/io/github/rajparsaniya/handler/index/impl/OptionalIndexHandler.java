@@ -13,10 +13,29 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
+/**
+ * The {@code OptionalIndexHandler} class provides an implementation of the
+ * {@link IOptionalIndexHandler} interface.
+ *
+ * @author Raj Parsaniya
+ * @since 1.0.0
+ */
 public class OptionalIndexHandler extends BaseIndexHandler implements IOptionalIndexHandler {
+
+    /**
+     * Constructs a {@code OptionalIndexHandler} with a default behaviour.
+     *
+     * @since 1.0.0
+     */
     public OptionalIndexHandler() {
     }
 
+    /**
+     * Constructs a {@code OptionalIndexHandler} with a specified initial index.
+     *
+     * @param initialIndex the initial index value to be set.
+     * @since 1.0.0
+     */
     public OptionalIndexHandler(final Integer initialIndex) {
         super(initialIndex);
     }
