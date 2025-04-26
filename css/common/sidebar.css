@@ -1,0 +1,62 @@
+.sidebar {
+	width: 100%;
+	display: none;
+	overflow: hidden;
+	background-color: #f0f0f0;
+	transition: max-height 0.3s ease;
+}
+
+.small-header {
+	display: flex;
+	overflow-x: auto;
+	position: relative;
+	background-color: #ffffff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	margin: 10px 15px;
+	padding: 10px;
+}
+
+.small-header h3 {
+	border: 0px;
+	padding: 0px;
+	margin: auto;
+}
+
+.menu {
+	margin: 0px 0px 85px 0px;
+}
+
+.link {
+	display: flex;
+	flex-direction: row;
+	padding: 5px 15px;
+	margin: 0px;
+}
+
+.link p {
+	display: block;
+	color: #333333;
+	background-color: #ffffff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 8px 0px 0px 8px;
+	margin: 0px 2px 0px 0px;
+	padding: 5px 10px;
+}
+
+.link a {
+	width: 100%;
+	display: block;
+	color: #333333;
+	overflow: hidden;
+	white-space: normal;
+	text-decoration: none;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	background-color: #ffffff;
+	transition: background-color 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 0px 8px 8px 0px;
+	margin: 0px 0px 0px 2px;
+	padding: 5px 10px;
+}
