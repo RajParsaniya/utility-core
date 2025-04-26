@@ -1,0 +1,30 @@
+package io.github.rajparsaniya.function.functional.index;
+
+/**
+ * Represents a predicate (boolean-valued function) of two arguments.
+ * This is the two-arity specialization of {@link IPredicate}.
+ *
+ * <p>This is a functional interface whose functional method is
+ * {@link #test(Object, Object, int)}.
+ *
+ * @param <T> the type of the first argument to the predicate.
+ * @param <U> the type of the second argument the predicate.
+ * @author Raj Parsaniya
+ * @see IPredicate
+ * @since 1.0.0
+ */
+@FunctionalInterface
+public interface IBiPredicate<T, U> {
+
+    /**
+     * Evaluates this predicate on the given arguments.
+     *
+     * @param t     the first input argument.
+     * @param u     the second input argument.
+     * @param index the index of the current element.
+     * @return {@code true} if the input arguments match the predicate,
+     * otherwise {@code false}
+     * @since 1.0.0
+     */
+    boolean test(final T t, final U u, final int index);
+}

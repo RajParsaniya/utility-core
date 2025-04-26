@@ -1,0 +1,7 @@
+/**
+ * Contains specific implementations for functional-core processing.
+ *
+ * @author Raj Parsaniya
+ * @since 1.0.0
+ */
+package io.github.rajparsaniya.handler.functional.core.impl;
