@@ -1,0 +1,81 @@
+.tab-container {
+	overflow: hidden;
+	background-color: #f9f9f9;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border: 0px solid rgba(0, 0, 0, 0.125);
+	border-radius: 8px;
+	margin: 30px auto;
+}
+
+.tab-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #f9f9f9;
+}
+
+.tab-button {
+	flex: 1 1 auto;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	background-color: transparent;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-right: none;
+	line-height: 1.4;
+	font-size: 14px;
+	padding: 10px;
+}
+
+.tab-button:first-child {
+	border-top-left-radius: 8px;
+}
+
+.tab-button:last-child {
+	border-top-right-radius: 8px;
+	border-right: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.tab-button:hover {
+	background-color: #e0e0e0;
+}
+
+.tab-button.active {
+	color: #175bb0;
+	border-bottom: 1px solid #175bb0;
+	background-color: #ffffff;
+}
+
+.tab-content {
+	display: none;
+	background-color: #ffffff;
+	transition: opacity 0.3s ease;
+	padding: 15px;
+	tab-size: 8;
+	opacity: 0;
+}
+
+.tab-content.active {
+	display: block;
+	opacity: 1;
+}
+
+.tab-content textarea {
+	width: 100%;
+	height: 110px;
+	line-height: 1.5;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	font-size: 14px;
+	overflow: auto;
+	outline: none;
+	border: none;
+	resize: none;
+}
+
+@media (max-width: 600px) {
+	.tab-button {
+		flex: 0 0 50%;
+		font-size: 12px;
+		padding: 10px 5px;
+	}
+}

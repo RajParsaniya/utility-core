@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Utility Core</title>
+		<link rel="icon" href="./assets/icon.svg" />
+
+		<link rel="stylesheet" href="./css/common/style.css" />
+		<link rel="stylesheet" href="./css/common/loader.css" />
+		<link rel="stylesheet" href="./css/common/sidebar.css" />
+		<link rel="stylesheet" href="./css/common/contant.css" />
+		<link rel="stylesheet" href="./css/specific/main-sidebar.css" />
+		<link rel="stylesheet" href="./css/common/footer.css" />
+		<link rel="stylesheet" href="./css/common/effect.css" />
+		<link rel="stylesheet" href="./css/common/tab.css" />
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+	</head>
+	<body>
+		<div class="loader" id="loader">
+			<div class="loading-bar">
+				<div class="blue-bar"></div>
+			</div>
+		</div>
+
+		<div class="sidebar" id="sidebar">
+			<div class="small-header">
+				<img alt="Maven Central" src="./assets/maven-central.svg" />
+			</div>
+			<div class="menu" id="menu"></div>
+		</div>
+
+		<div class="content" id="content">
+			<div class="header">
+				<h3>Utility Core Documentation</h3>
+			</div>
+
+			<div class="container">
+				<div class="section" id="introduction">
+					<h3>(1) Introduction</h3>
+					<p>
+						This Java library serves as a comprehensive toolkit designed to significantly enhance developer productivity by addressing the common
+						challenges of boilerplate code and inherent Java limitations.
+					</p>
+					<p>
+						In addition, the library overcomes several of Java's limitations by offering enhanced features for complex tasks like reflection and
+						functional programming, along with robust solutions for immutability. By abstracting away the tedious and verbose parts of standard Java
+						development, it enables developers to focus on core application logic, ultimately speeding up development cycles and improving overall
+						code quality.
+					</p>
+				</div>
+
+				<div class="section" id="implementation">
+					<h3>(2) Implementation</h3>
+					<p>
+						The Utility Core library provides a set of utility classes intended to streamline development by reducing boilerplate code and enhancing
+						code readability. By offering reusable functions and tools, the library helps you perform common tasks more efficiently. The examples
+						showcase how you can integrate these utilities into your project to save time and effort, making your code more concise and
+						maintainable.
+					</p>
+					<div class="sub-section" id="stream-utility">
+						<h4>(2.1) Stream Utility</h4>
+						<p>
+							The Stream Utility is a powerful helper for working with the Java Stream pipeline, offering two key enhancements. First, it provides
+							a clean way to handle checked exceptions within stream operations, eliminating the need for verbose try-catch blocks and making the
+							code more readable and maintainable. Second, it adds index management capabilities, allowing developers to access the index of
+							elements while processing streams. This is particularly useful in scenarios where operations depend not just on the value but also
+							on the position of the element in the stream. Together, these features make stream-based programming in Java more expressive and
+							convenient.
+						</p>
+						<p><a id="link" href="./content/stream/">Click here</a> to see Stream Utility examples.</p>
+					</div>
+					<div class="sub-section" id="optional-utility">
+						<h4>(2.2) Optional Utility</h4>
+						<p>
+							The Optional Utility is a powerful helper for working with the Java Optional class, offering two key enhancements. First, it offers
+							built-in support for handling checked exceptions gracefully within optional operations, removing the clutter of manual try-catch
+							blocks and resulting in cleaner and more maintainable code. Second, it introduces index management capabilities, allowing developers
+							to access the position of elements within a processing context—particularly useful when Optionals are derived from indexed sources
+							or sequences. These enhancements empower developers to write more expressive and streamlined code when working with Optionals in
+							Java.
+						</p>
+						<p><a id="link" href="./content/optional/">Click here</a> to see Optional Utility examples.</p>
+					</div>
+					<div class="sub-section" id="functional-utility">
+						<h4>(2.3) Functional Utility</h4>
+						<p>
+							The Functional Utility enhances Java’s core functional interfaces by adding two key capabilities. First, it simplifies exception
+							handling by effortlessly supporting checked exceptions in lambda expressions, eliminating the need for boilerplate try-catch blocks.
+							Second, it introduces index-aware variants of standard functional interfaces, allowing developers to access the position of elements
+							during functional processing. These enhancements make Java’s functional programming approach more adaptable, intuitive, and capable
+							of addressing complex processing needs.
+						</p>
+						<p><a id="link" href="./content/functional/">Click here</a> to see Functional Utility examples.</p>
+					</div>
+				</div>
+
+				<div class="section" id="installation">
+					<h3>(3) Installation</h3>
+					<p>
+						You can include the following dependency from the
+						<a href="https://central.sonatype.com/artifact/io.github.rajparsaniya/utility-core" target="_blank">Maven Central Repository</a>, which
+						is a widely used public repository for Java libraries. It is compatible with all major Java build tools. so there's no need to download
+						or manage the library manually—your build tool will automatically fetch and include it during the build process.
+					</p>
+					<div class="tab-container">
+						<div class="tab-buttons">
+							<button class="tab-button active" onclick="openTab('tab1')">Maven</button>
+							<button class="tab-button" onclick="openTab('tab2')">Gradle</button>
+							<button class="tab-button" onclick="openTab('tab3')">Kotlin</button>
+							<button class="tab-button" onclick="openTab('tab4')">SBT</button>
+							<button class="tab-button" onclick="openTab('tab5')">Ivy</button>
+							<button class="tab-button" onclick="openTab('tab6')">Grape</button>
+							<button class="tab-button" onclick="openTab('tab7')">Leiningen</button>
+							<button class="tab-button" onclick="openTab('tab8')">Buildr</button>
+						</div>
+
+						<div id="tab1" class="tab-content active"></div>
+						<div id="tab2" class="tab-content"></div>
+						<div id="tab3" class="tab-content"></div>
+						<div id="tab4" class="tab-content"></div>
+						<div id="tab5" class="tab-content"></div>
+						<div id="tab6" class="tab-content"></div>
+						<div id="tab7" class="tab-content"></div>
+						<div id="tab8" class="tab-content"></div>
+					</div>
+				</div>
+
+				<div class="footer">
+					<a href="https://github.com/RajParsaniya" target="_blank"><strong>Design By Raj Parsaniya</strong></a>
+				</div>
+
+				<button class="back-to-top" id="backToTop">&#8593;</button>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="./js/common/scroll.js"></script>
+		<script type="text/javascript" src="./js/common/sidebar.js"></script>
+		<script type="text/javascript" src="./js/common/installation.js"></script>
+		<script type="text/javascript" src="./js/specific/main-loader.js"></script>
+		<script type="text/javascript" src="./js/specific/main-sidebar.js"></script>
+	</body>
+</html>

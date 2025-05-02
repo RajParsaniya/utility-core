@@ -1,0 +1,75 @@
+.accordion {
+	transition: all 0.3s ease;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-bottom: none;
+}
+
+.accordion:first-of-type {
+	border-radius: 8px 8px 0px 0px;
+	overflow: hidden;
+}
+
+.accordion:last-child {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+	border-radius: 0px 0px 8px 8px;
+	overflow: hidden;
+}
+
+.accordion-header {
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	justify-content: space-between;
+	transition: background-color 0.3s ease;
+	background-color: #ffffff;
+	padding: 8px 12px;
+}
+
+.accordion-header::after {
+	content: "\002B";
+	transition: transform 0.3s ease;
+}
+
+.accordion-header.active::after {
+	content: "\00D7";
+	transform: rotate(90deg);
+}
+
+.accordion-content {
+	max-height: 0px;
+	overflow: hidden;
+	transition: max-height 0.4s ease, padding 0.4s ease;
+	background-color: #ffffff;
+	padding: 0px 20px;
+}
+
+.accordion-content.show {
+	border-top: 1px solid rgba(0, 0, 0, 0.125);
+	padding: 15px 20px;
+}
+
+.accordion-content-ul {
+	padding: 0px 10px 0px 10px;
+	margin: 0px 0px 20px 10px;
+}
+
+.accordion-content-li {
+	padding: 0px 20px 0px 0px;
+	margin: 0px 0px 10px 0px;
+}
+
+.accordion-content-li::marker {
+	content: "\2192";
+}
+
+.accordion-content-span {
+	position: relative;
+	left: 15px;
+}
+
+.accordion-content-span code {
+	background-color: #eeeeee;
+	border-radius: 6px;
+	font-size: 14px;
+	padding: 3px 6px;
+}

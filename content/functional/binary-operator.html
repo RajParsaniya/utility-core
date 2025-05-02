@@ -1,0 +1,83 @@
+<h3>(30) Functional.binary​Operator()</h3>
+
+<p>
+	The
+	<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BinaryOperator.html" target="_blank">BinaryOperator</a> functional
+	interface is a specialization of BiFunction for the case where all operands and the result are of the same type T.
+</p>
+
+<div class="accordion">
+	<div class="accordion-header">
+		<span>Checked exceptions can be handled smoothly within the <strong>binary​Operator()</strong> method without causing compile-time errors.</span>
+	</div>
+	<div class="accordion-content">
+		<ul class="accordion-content-ul">
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					To achieve this, you can instantiate a class implementing the <a id="functional-exception-handler" target="_blank">IFunctionalExceptionHandler</a> interface to handle exceptions.
+					Alternatively, you can use the <a id="functional-utils" target="_blank">FunctionalUtils</a> method to achieve the same functionality without
+					explicitly creating an instance of the implementing class.
+				</span>
+			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The <strong>setCatchable()</strong> method allows you to specify which exceptions should be caught and handled internally, ensuring that the
+					stream flow remains uninterrupted. Additionally, the <strong>setThrowable()</strong> method lets you define which exceptions should be
+					rethrown—optionally wrapping them with custom messages or exception types for more controlled error propagation.
+				</span>
+			</li>
+		</ul>
+		<div id="functional-exception-handler-binary-operator" class="gist-container"></div>
+	</div>
+</div>
+
+<div class="accordion">
+	<div class="accordion-header">
+		<span>Element indices can be accessed and managed within the <strong>binary​Operator()</strong> method during stream processing.</span>
+	</div>
+	<div class="accordion-content">
+		<ul class="accordion-content-ul">
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					To achieve this, you can instantiate a class implementing the <a id="functional-index-handler" target="_blank">IFunctionalIndexHandler</a> interface to manage indices explicitly.
+					Alternatively, you can use the <a id="functional-utils" target="_blank">FunctionalUtils</a> method to achieve the same functionality without
+					explicitly creating an instance of the implementing class.
+				</span>
+			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The <strong>setInitialIndex()</strong> method allows you to specify a custom starting index for stream element processing. By setting the
+					initial index explicitly, you maintain full control over index values—ensuring consistency across stream operations.
+				</span>
+			</li>
+		</ul>
+		<div id="functional-index-handler-binary-operator" class="gist-container"></div>
+	</div>
+</div>
+
+<div class="accordion">
+	<div class="accordion-header">
+		<span>Both of the above functionalities can be achieved within the <strong>binary​Operator()</strong> method.</span>
+	</div>
+	<div class="accordion-content">
+		<ul class="accordion-content-ul">
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					To achieve this, you can instantiate a class implementing the <a id="functional-handler" target="_blank">IFunctionalHandler</a> interface to handle exceptions and manage element
+					indices during stream operations. Alternatively, you can use the <a id="functional-utils" target="_blank">FunctionalUtils</a> utility
+					methods to obtain the same functionality without explicitly creating an instance of the implementing class.
+				</span>
+			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The <strong>setCatchable()</strong> method identifies exceptions that should be handled internally, ensuring that stream processing
+					continues without disruption. Meanwhile, the <strong>setThrowable()</strong> method identifies exceptions that should be rethrown, with the
+					option to wrap them in custom messages or exception types for controlled error handling. Additionally, the
+					<strong>setInitialIndex()</strong> method allows you to set a custom initial index, ensuring accurate and consistent index tracking
+					throughout the stream's execution.
+				</span>
+			</li>
+		</ul>
+		<div id="functional-handler-binary-operator" class="gist-container"></div>
+	</div>
+</div>
