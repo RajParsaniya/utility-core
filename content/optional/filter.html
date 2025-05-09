@@ -31,6 +31,16 @@
 					rethrown—optionally wrapping them with custom messages or exception types for more controlled error propagation.
 				</span>
 			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>filter()</strong> method to an
+					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> value, ensuring
+					that the operation safely handles checked exceptions. The provided predicate function checks whether the size of the file located at the
+					specified path exceeds a given maximum size. This operation retains the
+					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> value only if it
+					satisfies the condition, while seamlessly propagating any exception encountered during processing.
+				</span>
+			</li>
 		</ul>
 		<div id="optional-exception-handler-filter" class="gist-container"></div>
 	</div>

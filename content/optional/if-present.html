@@ -28,6 +28,16 @@
 					rethrown—optionally wrapping them with custom messages or exception types for more controlled error propagation.
 				</span>
 			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>ifPresent()</strong> method to an
+					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> value, ensuring
+					that the operation safely handles checked exceptions. The provided consumer function reads and prints the content of the file located at the
+					specified path. This operation executes the consumer action only if the
+					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> contains a
+					non-empty value, while seamlessly propagating any exception encountered during processing.
+				</span>
+			</li>
 		</ul>
 		<div id="optional-exception-handler-if-present" class="gist-container"></div>
 	</div>

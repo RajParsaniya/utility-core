@@ -13,9 +13,10 @@
 		<ul class="accordion-content-ul">
 			<li class="accordion-content-li">
 				<span class="accordion-content-span">
-					To achieve this, you can instantiate a class implementing the <a id="functional-exception-handler" target="_blank">IFunctionalExceptionHandler</a> interface to handle exceptions.
-					Alternatively, you can use the <a id="functional-utils" target="_blank">FunctionalUtils</a> method to achieve the same functionality without
-					explicitly creating an instance of the implementing class.
+					To achieve this, you can instantiate a class implementing the
+					<a id="functional-exception-handler" target="_blank">IFunctionalExceptionHandler</a> interface to handle exceptions. Alternatively, you can
+					use the <a id="functional-utils" target="_blank">FunctionalUtils</a> method to achieve the same functionality without explicitly creating an
+					instance of the implementing class.
 				</span>
 			</li>
 			<li class="accordion-content-li">
@@ -23,6 +24,13 @@
 					The <strong>setCatchable()</strong> method allows you to specify which exceptions should be caught and handled internally, ensuring that the
 					stream flow remains uninterrupted. Additionally, the <strong>setThrowable()</strong> method lets you define which exceptions should be
 					rethrown—optionally wrapping them with custom messages or exception types for more controlled error propagation.
+				</span>
+			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>intConsumer()</strong> method to a file deletion operation, ensuring that the
+					operation continues safely even in the presence of a checked exception. The provided integer-consuming function deletes the file
+					corresponding to the specified index if it exists. This operation performs a side effect based on the given integer input.
 				</span>
 			</li>
 		</ul>
@@ -38,9 +46,10 @@
 		<ul class="accordion-content-ul">
 			<li class="accordion-content-li">
 				<span class="accordion-content-span">
-					To achieve this, you can instantiate a class implementing the <a id="functional-index-handler" target="_blank">IFunctionalIndexHandler</a> interface to manage indices explicitly.
-					Alternatively, you can use the <a id="functional-utils" target="_blank">FunctionalUtils</a> method to achieve the same functionality without
-					explicitly creating an instance of the implementing class.
+					To achieve this, you can instantiate a class implementing the
+					<a id="functional-index-handler" target="_blank">IFunctionalIndexHandler</a> interface to manage indices explicitly. Alternatively, you can
+					use the <a id="functional-utils" target="_blank">FunctionalUtils</a> method to achieve the same functionality without explicitly creating an
+					instance of the implementing class.
 				</span>
 			</li>
 			<li class="accordion-content-li">
@@ -62,9 +71,10 @@
 		<ul class="accordion-content-ul">
 			<li class="accordion-content-li">
 				<span class="accordion-content-span">
-					To achieve this, you can instantiate a class implementing the <a id="functional-handler" target="_blank">IFunctionalHandler</a> interface to handle exceptions and manage element
-					indices during stream operations. Alternatively, you can use the <a id="functional-utils" target="_blank">FunctionalUtils</a> utility
-					methods to obtain the same functionality without explicitly creating an instance of the implementing class.
+					To achieve this, you can instantiate a class implementing the <a id="functional-handler" target="_blank">IFunctionalHandler</a> interface to
+					handle exceptions and manage element indices during stream operations. Alternatively, you can use the
+					<a id="functional-utils" target="_blank">FunctionalUtils</a> utility methods to obtain the same functionality without explicitly creating an
+					instance of the implementing class.
 				</span>
 			</li>
 			<li class="accordion-content-li">
