@@ -60,6 +60,15 @@
 					initial index explicitly, you maintain full control over index values—ensuring consistency across stream operations.
 				</span>
 			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>intBinaryOperator()</strong> method to an indexed collection traversal, ensuring
+					that each element is processed safely with contextual awareness and an additional input parameter. The provided integer-binary operation
+					function retrieves the current node value, generates detailed information about its neighboring elements, and outputs this contextual data.
+					This operation returns an integer result that represents the computed node value while incorporating both the element and the additional
+					argument during stream processing.
+				</span>
+			</li>
 		</ul>
 		<div id="functional-index-handler-int-binary-operator" class="gist-container"></div>
 	</div>
@@ -87,6 +96,12 @@
 					<strong>setInitialIndex()</strong> method allows you to set a custom initial index, ensuring accurate and consistent index tracking
 					throughout the stream's execution.
 				</span>
+			</li>
+			<li>
+				The following code demonstrates how to apply the <strong>intBinaryOperator()</strong> method to a collection-processing operation, ensuring that
+				the operation continues safely even in the presence of a checked exception. The provided operator performs an action on each element by
+				retrieving and displaying the corresponding date, returning an integer result after processing. This operation handles exceptions internally
+				while maintaining seamless processing across all elements.
 			</li>
 		</ul>
 		<div id="functional-handler-int-binary-operator" class="gist-container"></div>

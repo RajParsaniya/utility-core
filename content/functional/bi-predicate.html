@@ -29,8 +29,8 @@
 			<li class="accordion-content-li">
 				<span class="accordion-content-span">
 					The following code demonstrates how to apply the <strong>biPredicate()</strong> method to check if two files have the same content, while
-					ensuring that any checked exceptions are handled gracefully. The function reads the contents of both files and compares them, returning a
-					boolean result.
+					ensuring that any checked exceptions are handled. The function reads the contents of both files and compares them, returning a boolean
+					result.
 				</span>
 			</li>
 		</ul>
@@ -56,6 +56,14 @@
 				<span class="accordion-content-span">
 					The <strong>setInitialIndex()</strong> method allows you to specify a custom starting index for stream element processing. By setting the
 					initial index explicitly, you maintain full control over index values—ensuring consistency across stream operations.
+				</span>
+			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>biPredicate()</strong> method to an indexed collection traversal, ensuring that
+					each element is evaluated safely with contextual awareness. The provided bi-predicate function determines whether the current element and an
+					associated value satisfy a condition, filtering the collection accordingly. This operation evaluates each element in combination with
+					additional external data and returns a boolean result, enabling selective inclusion of elements during stream processing.
 				</span>
 			</li>
 		</ul>
@@ -84,6 +92,14 @@
 					option to wrap them in custom messages or exception types for controlled error handling. Additionally, the
 					<strong>setInitialIndex()</strong> method allows you to set a custom initial index, ensuring accurate and consistent index tracking
 					throughout the stream's execution.
+				</span>
+			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>biPredicate()</strong> method to a collection-filtering operation, ensuring that
+					the operation continues safely even in the presence of a checked exception. The provided bi-predicate evaluates each company’s corresponding
+					domain to determine whether it meets a specified qualification condition. This operation filters the collection based on the evaluation
+					result, handling exceptions internally while preserving smooth iteration.
 				</span>
 			</li>
 		</ul>

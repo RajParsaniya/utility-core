@@ -32,8 +32,8 @@
 				<span class="accordion-content-span">
 					The following code demonstrates how to apply the <strong>peek()</strong> method to a stream of file contents, ensuring that the stream
 					continues processing even in the presence of checked exception during the initial <strong>map()</strong> operation. For each file content,
-					the <strong>peek()</strong> operation performs a side-effect (printing the content to the console) without modifying the elements of the
-					stream. Finally, it joins all the file contents into a single string.
+					the <strong>peek()</strong> operation performs a side-effect without modifying the elements of the stream. Finally, it joins all the file
+					contents into a single string.
 				</span>
 			</li>
 		</ul>
@@ -95,6 +95,15 @@
 					option to wrap them in custom messages or exception types for controlled error handling. Additionally, the
 					<strong>setInitialIndex()</strong> method allows you to set a custom initial index, ensuring accurate and consistent index tracking
 					throughout the stream's execution.
+				</span>
+			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply <strong>peek()</strong> method to a list of company names, ensuring that the stream continues
+					processing even in the presence of checked exceptions. The <strong>map()</strong> operation transforms each company name into a formatted
+					string that combines the company name and its corresponding domain URL. The <strong>peek()</strong> operation is used for side-effect
+					logging, printing out the company details along with their index in the list. This operation efficiently processes the stream, applies
+					transformations, and logs intermediate results while avoiding any disruptions due to exceptions.
 				</span>
 			</li>
 		</ul>

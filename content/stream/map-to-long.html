@@ -33,8 +33,8 @@
 			<li class="accordion-content-li">
 				<span class="accordion-content-span">
 					The following code demonstrates how to apply the <strong>mapToLong()</strong> method to a list of file paths, ensuring that the stream
-					continues processing even in the presence of checked exception. For each file path, it retrieves the file size as a <code>long</code> and
-					transforms the stream of file paths into a
+					continues processing even in the presence of checked exception. For each file path, it retrieves the file size as a long and transforms the
+					stream of file paths into a
 					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/LongStream.html" target="_blank">LongStream</a> of
 					file sizes. Finally, it calculates the total file size of all files.
 				</span>
@@ -98,6 +98,15 @@
 					option to wrap them in custom messages or exception types for controlled error handling. Additionally, the
 					<strong>setInitialIndex()</strong> method allows you to set a custom initial index, ensuring accurate and consistent index tracking
 					throughout the stream's execution.
+				</span>
+			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>mapToLong()</strong> method to a list of date strings, ensuring that the stream
+					continues processing even in the presence of checked exceptions. The provided mapping function extracts the year from each date, converts it
+					to a long value, and conditionally returns it based on the element's index. This operation produces a
+					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/LongStream.html" target="_blank">LongStream</a> of
+					qualified years, from which the minimum value is subsequently computed.
 				</span>
 			</li>
 		</ul>

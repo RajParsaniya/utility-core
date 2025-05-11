@@ -1,6 +1,6 @@
 const functionalExceptionHandler = "https://gist.github.com/RajParsaniya/49099c59d5e6bdda197cba3b3888a134.js";
 const functionalIndexHandler = "https://gist.github.com/RajParsaniya/d3a916ea565f3f355500d7351e56063c.js";
-const functionalHandler = "https://gist.github.com/RajParsaniya/d3a916ea565f3f355500d7351e56063c.js";
+const functionalHandler = "https://gist.github.com/RajParsaniya/2a0efe1ddad14411bab90373a07bb117.js";
 
 const functionalImplMapping = new Map();
 

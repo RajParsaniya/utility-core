@@ -59,6 +59,14 @@
 					initial index explicitly, you maintain full control over index values—ensuring consistency across stream operations.
 				</span>
 			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>intPredicate()</strong> method to an indexed collection-based condition, ensuring
+					that each element is evaluated safely with index-aware logic. The provided integer-predicate function determines whether the current node
+					satisfies an even-qualification criterion based on its index position. This operation returns a boolean result that reflects whether the
+					element should be included during stream filtering.
+				</span>
+			</li>
 		</ul>
 		<div id="functional-index-handler-int-predicate" class="gist-container"></div>
 	</div>
@@ -85,6 +93,15 @@
 					option to wrap them in custom messages or exception types for controlled error handling. Additionally, the
 					<strong>setInitialIndex()</strong> method allows you to set a custom initial index, ensuring accurate and consistent index tracking
 					throughout the stream's execution.
+				</span>
+			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>intPredicate()</strong> method to a collection-processing operation, ensuring that
+					the operation continues safely even in the presence of a checked exception. The provided predicate tests each element by retrieving the
+					corresponding date and determining whether it meets a specific condition (in this case, whether the index is odd). This operation handles
+					exceptions internally while maintaining seamless processing across all elements, filtering the collection accordingly based on the
+					predicate's result.
 				</span>
 			</li>
 		</ul>
