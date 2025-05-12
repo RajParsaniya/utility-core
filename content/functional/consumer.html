@@ -58,6 +58,14 @@
 					initial index explicitly, you maintain full control over index values—ensuring consistency across stream operations.
 				</span>
 			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>consumer()</strong> method to an indexed collection traversal, ensuring that each
+					element is consumed safely with contextual awareness. The provided consuming function generates detailed information about the current
+					element in conjunction with external data and outputs this contextual data. This operation consumes each element without returning a result,
+					facilitating side-effect actions such as printing during stream processing.
+				</span>
+			</li>
 		</ul>
 		<div id="functional-index-handler-consumer" class="gist-container"></div>
 	</div>
@@ -84,6 +92,14 @@
 					option to wrap them in custom messages or exception types for controlled error handling. Additionally, the
 					<strong>setInitialIndex()</strong> method allows you to set a custom initial index, ensuring accurate and consistent index tracking
 					throughout the stream's execution.
+				</span>
+			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>consumer()</strong> method to a collection-processing operation, ensuring that the
+					operation continues safely even in the presence of a checked exception. The provided consuming function processes each company name along
+					with its corresponding domain by retrieving and printing combined company details. This operation applies the logic to every element of the
+					collection, handling exceptions internally while preserving smooth iteration.
 				</span>
 			</li>
 		</ul>

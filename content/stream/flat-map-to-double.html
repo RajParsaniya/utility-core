@@ -102,6 +102,17 @@
 					throughout the stream's execution.
 				</span>
 			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>flatMapToDouble()</strong> method to a list of numeric collections, ensuring that
+					the stream continues processing even in the presence of checked exceptions. The provided mapping function transforms each inner collection
+					of double values into a
+					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>,
+					conditionally including values based on the element's index. This operation flattens the nested double streams into a single
+					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>,
+					from which the sum of all qualified values is subsequently computed.
+				</span>
+			</li>
 		</ul>
 		<div id="stream-handler-flat-map-to-double" class="gist-container"></div>
 	</div>

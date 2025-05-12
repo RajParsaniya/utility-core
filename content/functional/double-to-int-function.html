@@ -60,6 +60,15 @@
 					initial index explicitly, you maintain full control over index values—ensuring consistency across stream operations.
 				</span>
 			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>doubleToIntFunction()</strong> method to an indexed collection traversal, ensuring
+					that each element is processed safely with contextual awareness. The provided double-to-int function generates detailed information about
+					the current node and its neighboring elements, outputs this contextual data, and computes an integer result from the current node. This
+					operation processes each element and returns an integer result, facilitating both side-effect actions such as printing and value
+					transformation during stream processing.
+				</span>
+			</li>
 		</ul>
 		<div id="functional-index-handler-double-to-int-function" class="gist-container"></div>
 	</div>
@@ -86,6 +95,14 @@
 					option to wrap them in custom messages or exception types for controlled error handling. Additionally, the
 					<strong>setInitialIndex()</strong> method allows you to set a custom initial index, ensuring accurate and consistent index tracking
 					throughout the stream's execution.
+				</span>
+			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>doubleToIntFunction()</strong> method to a collection-processing operation,
+					ensuring that the operation continues safely even in the presence of a checked exception. The provided function processes each element by
+					retrieving and printing the corresponding date, and then converts a double value to an integer after performing some computation. Any
+					potential exceptions are handled internally, allowing the operation to proceed smoothly across all elements without interruption.
 				</span>
 			</li>
 		</ul>

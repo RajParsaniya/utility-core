@@ -101,6 +101,17 @@
 					throughout the stream's execution.
 				</span>
 			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>flatMapToInt()</strong> method to a list of date string collections, ensuring that
+					the stream continues processing even in the presence of checked exceptions. The provided mapping function transforms each inner collection
+					of date strings into an
+					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/IntStream.html" target="_blank">IntStream</a> of
+					extracted years, conditionally including values based on the element's index. This operation flattens the nested integer streams into a
+					single <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/IntStream.html" target="_blank">IntStream</a>,
+					from which the minimum value is subsequently computed.
+				</span>
+			</li>
 		</ul>
 		<div id="stream-handler-flat-map-to-int" class="gist-container"></div>
 	</div>

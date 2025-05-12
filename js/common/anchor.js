@@ -18,5 +18,5 @@ function loadAnchor(mapping, event) {
 		.reduce((promiseChain, [key, value]) => {
 			return promiseChain.then(() => setAnchor(key, value));
 		}, Promise.resolve())
-		.then(() => setContentEvent(event));
+		.then(() => setAnchorEvent(event));
 }

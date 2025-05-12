@@ -95,6 +95,14 @@
 					throughout the stream's execution.
 				</span>
 			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>forEachOrdered()</strong> method to a parallel stream of company names and
+					associated domains, ensuring that the stream processes elements in the encounter order while still leveraging parallelism. For each company,
+					it prints the company details, including the domain, along with the associated index. The order of processing is guaranteed despite the
+					parallel execution of the stream. This approach ensures consistent and correct output when working with parallel streams.
+				</span>
+			</li>
 		</ul>
 		<div id="stream-handler-for-each-ordered" class="gist-container"></div>
 	</div>

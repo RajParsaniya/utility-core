@@ -58,6 +58,14 @@
 					initial index explicitly, you maintain full control over index values—ensuring consistency across stream operations.
 				</span>
 			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply a custom comparator using the <strong>comparator()</strong> method to sort a collection with
+					contextual awareness. The provided function compares two elements (fruits in this case) based on alphabetical order and, if they are equal,
+					by their original index in the collection. This operation enables sorting of the elements while considering both their value and position in
+					the original collection, ensuring a stable and context-aware sort.
+				</span>
+			</li>
 		</ul>
 		<div id="functional-index-handler-comparator" class="gist-container"></div>
 	</div>
@@ -84,6 +92,14 @@
 					option to wrap them in custom messages or exception types for controlled error handling. Additionally, the
 					<strong>setInitialIndex()</strong> method allows you to set a custom initial index, ensuring accurate and consistent index tracking
 					throughout the stream's execution.
+				</span>
+			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>comparator()</strong> method to a collection-sorting operation, ensuring that the
+					operation continues safely even in the presence of a checked exception. The provided comparator function compares two date strings by
+					extracting and comparing their year values, with a fallback to index comparison for tie-breaking. This operation sorts the collection based
+					on the comparison result, handling exceptions internally while preserving smooth iteration.
 				</span>
 			</li>
 		</ul>

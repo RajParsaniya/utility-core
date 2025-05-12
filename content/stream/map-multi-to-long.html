@@ -100,6 +100,14 @@
 					throughout the stream's execution.
 				</span>
 			</li>
+			<li class="accordion-content-li">
+				<span class="accordion-content-span">
+					The following code demonstrates how to apply the <strong>mapMultiToLong()</strong> method to a list of date strings, ensuring that the
+					stream continues processing even in the presence of checked exceptions. The provided mapping function emits multiple long values
+					representing the years of the current, previous, and next dates relative to each element. This operation efficiently flattens these multiple
+					results into a single stream of long year values.
+				</span>
+			</li>
 		</ul>
 		<div id="stream-handler-map-multi-to-long" class="gist-container"></div>
 	</div>
