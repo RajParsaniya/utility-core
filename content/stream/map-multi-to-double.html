@@ -1,11 +1,11 @@
 <h3>(13) Stream.mapMultiToDouble()</h3>
 
 <p>
-	The <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" target="_blank">Stream</a> interface provides a
+	The <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html" target="_blank">Stream</a> interface provides a
 	<strong>mapMultiToDouble()</strong> method that accepts a
-	<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiConsumer.html" target="_blank">BiConsumer</a> functional
+	<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/BiConsumer.html" target="_blank">BiConsumer</a> functional
 	interface, which allows mapping each element to multiple double values using a provided consumer, and returns a
-	<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>
+	<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>
 	consisting of the produced double elements.
 </p>
 
@@ -35,7 +35,7 @@
 					The following code demonstrates how to apply the <strong>mapMultiToDouble()</strong> method to a list of file paths, ensuring that the
 					stream continues processing even in the presence of checked exception. For each file path, it generates the file size in bytes, KB, MB, and
 					GB as double values and emits them to the resulting
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>.
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>.
 					The final result is a list containing these file sizes for all file paths.
 				</span>
 			</li>
@@ -68,7 +68,7 @@
 					The following code demonstrates how to apply the <strong>mapMultiToDouble()</strong> method to a list of nodes while ensuring that the
 					stream continues processing even in the presence of index-based operations. The provided bi-consumer function generates multiple values for
 					each node, including the previous node, the current node, and the next node, and emits these values to the resulting
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>.
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>.
 					This operation results in a stream of node values along with their adjacent values.
 				</span>
 			</li>

@@ -1,11 +1,11 @@
 <h3>(5) Stream.mapToDouble()</h3>
 
 <p>
-	The <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" target="_blank">Stream</a> interface provides a
+	The <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html" target="_blank">Stream</a> interface provides a
 	<strong>mapToDouble()</strong> method that accepts a
-	<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/ToDoubleFunction.html" target="_blank">ToDoubleFunction</a>
+	<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/ToDoubleFunction.html" target="_blank">ToDoubleFunction</a>
 	functional interface, which represents a function that produces a double-valued result, and returns a
-	<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a> consisting of the
+	<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a> consisting of the
 	results of applying the given function to the elements of the original stream.
 </p>
 
@@ -35,7 +35,7 @@
 					The following code demonstrates how to apply the <strong>mapToDouble()</strong> method to a list of file paths, ensuring that the stream
 					continues processing even in the presence of checked exception. For each file path, it retrieves the file size as a <code>double</code> and
 					transforms the stream of file paths into a
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>
 					of file sizes. Finally, it calculates the total file size of all files.
 				</span>
 			</li>
@@ -68,7 +68,7 @@
 					The following code demonstrates how to apply the <strong>mapToDouble()</strong> method to a list of numbers while ensuring that the stream
 					continues processing even in the presence of index-based operations. The provided bi-function evaluates each element and its index to
 					selectively return values based on a specified condition, transforming the stream of numbers into a
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>
 					of qualified values. Finally, it calculates the sum of all the qualified values.
 				</span>
 			</li>
@@ -105,7 +105,7 @@
 					The following code demonstrates how to apply the <strong>mapToDouble()</strong> method to a list of date strings, ensuring that the stream
 					continues processing even in the presence of checked exceptions. The provided mapping function extracts the year from each date, converts it
 					to a double value, and conditionally returns it based on the element's index. This operation produces a
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>
 					of qualified years, from which the minimum value is subsequently computed.
 				</span>
 			</li>
