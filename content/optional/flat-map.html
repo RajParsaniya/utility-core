@@ -1,12 +1,12 @@
 <h3>(4) Optional.flatMap()</h3>
 
 <p>
-	The <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> class provides a
+	The <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> class provides a
 	<strong>flatMap()</strong> method that accepts a
-	<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" target="_blank">Function</a> functional interface,
+	<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Function.html" target="_blank">Function</a> functional interface,
 	which maps a value if present to another
-	<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a>, and returns the result directly
-	without nesting, or an empty <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> if
+	<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a>, and returns the result directly
+	without nesting, or an empty <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> if
 	no value is present.
 </p>
 
@@ -34,14 +34,14 @@
 			<li class="accordion-content-li">
 				<span class="accordion-content-span">
 					The following code demonstrates how to apply the <strong>flatMap()</strong> method to an
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> value, ensuring
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> value, ensuring
 					that the operation safely handles checked exceptions. The provided mapping function reads the content of the file located at the specified
 					path and returns an
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> containing the
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> containing the
 					result. This operation flattens the nested
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> structure and
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> structure and
 					returns a single
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> containing the
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> containing the
 					mapped value, while seamlessly propagating any exception encountered during processing.
 				</span>
 			</li>
@@ -74,14 +74,14 @@
 			<li class="accordion-content-li">
 				<span class="accordion-content-span">
 					The following code demonstrates how to apply the <strong>flatMap()</strong> method to an
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> value, ensuring
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> value, ensuring
 					that the operation transforms the contained value into another
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a>. The provided
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a>. The provided
 					function retrieves the class name from the class path and wraps it in an
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a>. If the
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> contains a
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a>. If the
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> contains a
 					non-empty value, the transformation occurs, and the result is printed. This operation ensures that the flat mapping is executed only if the
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> contains a
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> contains a
 					value, providing a seamless flow for processing.
 				</span>
 			</li>

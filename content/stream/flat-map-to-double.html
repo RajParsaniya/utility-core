@@ -1,13 +1,13 @@
 <h3>(9) Stream.flatMapToDouble()</h3>
 
 <p>
-	The <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" target="_blank">Stream</a> interface provides a
+	The <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html" target="_blank">Stream</a> interface provides a
 	<strong>flatMapToDouble()</strong> method that accepts a
-	<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" target="_blank">Function</a>
+	<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Function.html" target="_blank">Function</a>
 	functional interface mapping elements to
-	<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a> objects, and
+	<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a> objects, and
 	returns a
-	<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a> consisting of the
+	<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a> consisting of the
 	flattened double values.
 </p>
 
@@ -37,7 +37,7 @@
 					The following code demonstrates how to apply the <strong>flatMapToDouble()</strong> method to a list of directory paths, ensuring that the
 					stream continues processing even in the presence of checked exception. For each directory, it retrieves the size of all files within it as a
 					DoubleStream and then flattens these streams into a single
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>.
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>.
 					The total size of all files across all directories is then calculated.
 				</span>
 			</li>
@@ -70,7 +70,7 @@
 					The following code demonstrates how to apply the <strong>flatMapToDouble()</strong> method to a list of node collections while ensuring that
 					the stream continues processing even in the presence of index-based operations. The provided bi-function transforms each collection of nodes
 					by evaluating each node with its index, flattening the resulting streams of double values into a single
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>.
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>.
 					This operation calculates the sum of all the qualified node values.
 				</span>
 			</li>
@@ -107,9 +107,9 @@
 					The following code demonstrates how to apply the <strong>flatMapToDouble()</strong> method to a list of numeric collections, ensuring that
 					the stream continues processing even in the presence of checked exceptions. The provided mapping function transforms each inner collection
 					of double values into a
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>,
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>,
 					conditionally including values based on the element's index. This operation flattens the nested double streams into a single
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>,
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/DoubleStream.html" target="_blank">DoubleStream</a>,
 					from which the sum of all qualified values is subsequently computed.
 				</span>
 			</li>

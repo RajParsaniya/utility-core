@@ -1,9 +1,9 @@
 <h3>(6) Optional.orElseGet()</h3>
 
 <p>
-	The <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> class provides an
+	The <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> class provides an
 	<strong>orElseGet()</strong> method that accepts a
-	<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" target="_blank">Supplier</a> functional interface,
+	<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Supplier.html" target="_blank">Supplier</a> functional interface,
 	which returns a fallback value to be used if the original is empty, and returns the contained value if present otherwise, returns the result of the
 	supplier.
 </p>
@@ -32,10 +32,10 @@
 			<li class="accordion-content-li">
 				<span class="accordion-content-span">
 					The following code demonstrates how to apply the <strong>orElseGet()</strong> method to an
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> value, ensuring
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> value, ensuring
 					that the operation safely handles checked exceptions. The provided supplier function reads the content of a default file and returns the
 					result if the original
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> is empty. This
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> is empty. This
 					operation supplies an alternative value directly when necessary, while seamlessly propagating any exception encountered during processing.
 				</span>
 			</li>
@@ -68,13 +68,13 @@
 			<li class="accordion-content-li">
 				<span class="accordion-content-span">
 					The following code demonstrates how to apply the <strong>orElseGet()</strong> method to an
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> value, ensuring
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> value, ensuring
 					that the operation seamlessly provides an alternative when the original
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> is empty. The
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> is empty. The
 					provided supplier function retrieves the details of a domain and returns the result if the
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> is present. If
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> is present. If
 					not, it falls back to an alternative
-					<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> value generated
+					<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" target="_blank">Optional</a> value generated
 					by the supplier. This approach ensures smooth execution by supplying a default value when necessary.
 				</span>
 			</li>
